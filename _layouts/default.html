@@ -16,6 +16,26 @@
     {% include footer.html %}
     {% include modals.html %}
     {% include js.html %}
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function() {
+      $('a.page-scroll, .scroll-bottom-btn').on('click', function(event) {
+        var $anchor = $(this);
+        var href = $anchor.attr('href');
+        if (href && href.startsWith('#')) {
+          var $target = $(href);
+          if ($target.length) {
+            $('html, body').stop().animate({
+              scrollTop: $target.offset().top - 50 // adjust offset for navbar height
+            }, 400, 'linear'); // 400ms, linear easing
+            event.preventDefault();
+          }
+        }
+      });
+    });
+    </script>
+    <!-- Add jQuery easing for smooth effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     </body>
 </html>

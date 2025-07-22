@@ -170,9 +170,20 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+/* Remove yellow highlight/focus from navbar links */
+.navbar-nav > li > a,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: inherit;
+}
+
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    transition: background-color 0.3s;
 }
 
 .navbar-default .navbar-brand {
@@ -265,37 +276,89 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/saja-cafe.jpeg');
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    min-height: 100vh;
+.hero-header {
+    position: relative;
+    width: 100vw;
     height: 100vh;
+    min-height: 100vh;
+    background: url('/sajacafe/img/saja-cafe.jpeg') center center/cover no-repeat;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-header .scroll-bottom-btn {
+.hero-overlay {
     position: absolute;
-    left: 50%;
-    bottom: 40px; /* or your preferred value */
-    transform: translateX(-50%);
-    z-index: 10;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;    /* Push content to the bottom */
+    height: 100vh;
+    padding-bottom: 12vh;         /* Add space from the bottom */
+}
+
+.hero-logo {
+    max-width: 350px;
+    width: 80vw;
+    margin-bottom: 40px;
+}
+
+/* Make hero titles much bigger for desktop and mobile */
+.hero-title {
+    color: #fff;
+    font-size: 10vw;           /* Responsive: scales with viewport width */
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+    margin-bottom: 0.3em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    color: #fff;
+    font-size: 3vw;           /* Responsive: scales with viewport width */
+    font-family: 'Droid Serif', serif;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* For very large screens, cap the size */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 9rem;
+    }
+    .hero-subtitle {
+        font-size: 2.5rem;
+    }
+}
+
+/* For small screens, ensure readability */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
 }
 
 .scroll-bottom-btn {
-    position: fixed;
-    left: 50%;
-    bottom: 100px; /* Adjust as needed */
-    transform: translateX(-50%);
-    z-index: 9999;
+    margin-top: 2em;
     background: #fff;
     color: #222;
     border: 2px solid #222;
@@ -314,6 +377,10 @@ header .scroll-bottom-btn {
     background: #222;
     color: #fff;
     text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header .intro-text {
