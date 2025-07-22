@@ -269,13 +269,51 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/saja-cafe.jpeg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+header .scroll-bottom-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 40px; /* or your preferred value */
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-bottom-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 100px; /* Adjust as needed */
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    font-size: 2em;
+    opacity: 0.95;
+    transition: background 0.2s, color 0.2s;
+}
+.scroll-bottom-btn:hover {
+    background: #222;
+    color: #fff;
+    text-decoration: none;
 }
 
 header .intro-text {
