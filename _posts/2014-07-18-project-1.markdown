@@ -1,11 +1,11 @@
 ---
-title: Dreams
-subtitle: Website Design
+title: Golden Honmoon
+subtitle: Matcha, Banana Syrup
 layout: default
 modal-id: 1
 date: 2014-07-18
-img: dreams.png
-thumbnail: dreams-thumbnail.png
+img: golden-honmoon.png
+thumbnail: golden-honmoon.png
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap

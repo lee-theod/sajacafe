@@ -1,11 +1,11 @@
 ---
-title: Escape
-subtitle: Website Design
+title: Seoul Slayer
+subtitle: espresso, black sesame, vanilla
 layout: default
 modal-id: 2
 date: 2014-07-17
-img: escape.png
-thumbnail: escape-thumbnail.png
+img: black-sesame.png
+thumbnail: black-sesame.png
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
