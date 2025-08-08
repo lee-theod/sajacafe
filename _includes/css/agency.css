@@ -635,8 +635,39 @@ section h3.section-subheading {
         height: 100px;
         margin-left: -50px;
     }
+
     .menu-image-container img {
         max-width: 95% !important;
+    }
+
+    .review-container {
+        padding: 0 15px;
+    }
+    
+    .review-box {
+        max-width: 100% !important;
+        width: 95% !important;
+        padding: 20px !important;
+        margin: 0 auto;
+    }
+    
+    .btn-lg {
+        font-size: 14px !important;
+        padding: 10px 15px !important;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-box {
+        width: 90% !important;
+        padding: 15px !important;
+    }
+    
+    .btn-lg {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
     }
 }
 
