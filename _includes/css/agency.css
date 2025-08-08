@@ -628,6 +628,47 @@ section h3.section-subheading {
     left: 0;
 }
 
+/* Menu Modal Styles */
+.menu-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.menu-modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-close:hover,
+.menu-close:focus {
+    color: #bbb;
+}
+
 /* Adjust for mobile screens */
 @media(max-width:767px) {
     .timeline > li .timeline-image {
@@ -656,6 +697,10 @@ section h3.section-subheading {
         padding: 10px 15px !important;
         width: 100%;
         max-width: 250px;
+    }
+
+    .menu-image-clickable {
+        cursor: pointer !important;
     }
 }
 

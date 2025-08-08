@@ -11,11 +11,34 @@
             <div class="col-lg-12">
                 <div class="menu-image-container" style="display: flex; justify-content: center; align-items: center;">
                     <img src="img/portfolio/menu.jpg" 
-                        class="img-responsive" 
-                        alt="Saja Cafe Menu" 
-                        style="border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 800px; width: 100%; height: auto;">
+                         class="img-responsive menu-image-clickable" 
+                         alt="Saja Cafe Menu" 
+                         style="border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 800px; width: 100%; height: auto; cursor: pointer;"
+                         onclick="openMenuModal()">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Menu Modal -->
+<div id="menuModal" class="menu-modal" onclick="closeMenuModal()">
+    <img class="menu-modal-content" id="menuModalImg">
+    <span class="menu-close">&times;</span>
+</div>
+
+<script>
+function openMenuModal() {
+    // Only open modal on mobile devices
+    if (window.innerWidth <= 768) {
+        document.getElementById('menuModal').style.display = "block";
+        document.getElementById('menuModalImg').src = "img/portfolio/menu.jpg";
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+    }
+}
+
+function closeMenuModal() {
+    document.getElementById('menuModal').style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+}
+</script>
