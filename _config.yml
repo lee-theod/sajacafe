@@ -11,36 +11,36 @@ description: "Write an awesome description for your new site here. You can edit 
 people:
 - name: Teddy Lee
   pic: teddy
-  position: Lead Designer
+  position: Baby Saja
   social:
     - title: instagram
       url: https://www.instagram.com/teddyosaurusrex/
     - title: facebook
-      url: #
+      url: https://www.facebook.com/teddyosaurusrex/
     - title: linkedin
       url: https://www.linkedin.com/in/lee-theodore/
 
 - name: James Lo
   pic: james
-  position: Lead Marketer
+  position: Mystery Saja
   social:
-    - title: twitter
-      url: #
+    - title: instagram
+      url: https://www.instagram.com/lo__jam/
     - title: facebook
-      url: #
+      url: https://www.facebook.com/james.lo.5268
     - title: linkedin
-      url: #
+      url: https://www.linkedin.com/in/james-lo-m-s-99058120a/
 
 - name: Daniel Yoon
   pic: daniel
-  position: Lead Developer
+  position: Abby Saja
   social:
-    - title: twitter
-      url: #
+    - title: instagram
+      url: https://www.instagram.com/danielyooon/
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/daniel.yoon.587
+    - title: linkedin
+      url: https://www.linkedin.com/in/daniel-yoon-04b779b9/
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
