@@ -628,12 +628,36 @@ section h3.section-subheading {
     left: 0;
 }
 
+/* Desktop menu image */
+.menu-image-container img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
 /* Adjust for mobile screens */
 @media(max-width:767px) {
     .timeline > li .timeline-image {
         width: 100px;
         height: 100px;
         margin-left: -50px;
+    }
+}
+
+/* Mobile responsive menu image */
+@media (max-width: 768px) {
+    .menu-image-container img {
+        max-width: 100%;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-image-container img {
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
