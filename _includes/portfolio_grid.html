@@ -14,31 +14,62 @@
                          class="img-responsive menu-image-clickable" 
                          alt="Saja Cafe Menu" 
                          style="border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 800px; width: 100%; height: auto; cursor: pointer;"
-                         onclick="openMenuModal()">
+                         onclick="openFullPageMenu()">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Menu Modal -->
-<div id="menuModal" class="menu-modal" onclick="closeMenuModal()">
-    <img class="menu-modal-content" id="menuModalImg">
-    <span class="menu-close">&times;</span>
+<!-- Full Page Menu View -->
+<div id="fullPageMenu" class="full-page-menu" style="display: none;">
+    <div class="menu-header">
+        <button class="back-button" onclick="closeFullPageMenu()">
+            <i class="fa fa-arrow-left"></i> Back
+        </button>
+        <h2>Menu</h2>
+    </div>
+    <div class="menu-content">
+        <img src="img/portfolio/menu.jpg" 
+             alt="Saja Cafe Menu" 
+             onclick="closeFullPageMenu()"
+             style="cursor: pointer;">
+    </div>
 </div>
 
 <script>
-function openMenuModal() {
-    // Only open modal on mobile devices
+function openFullPageMenu() {
+    // Only open full page menu on mobile devices
     if (window.innerWidth <= 768) {
-        document.getElementById('menuModal').style.display = "block";
-        document.getElementById('menuModalImg').src = "img/portfolio/menu.jpg";
+        document.getElementById('fullPageMenu').style.display = "block";
         document.body.style.overflow = "hidden"; // Prevent scrolling
+        
+        // Hide the main content
+        document.querySelector('#portfolio').style.display = "none";
+        document.querySelector('nav').style.display = "none";
+        
+        // Hide other sections
+        const sections = ['#about', '#team', '#contact'];
+        sections.forEach(section => {
+            const element = document.querySelector(section);
+            if (element) element.style.display = "none";
+        });
     }
 }
 
-function closeMenuModal() {
-    document.getElementById('menuModal').style.display = "none";
+function closeFullPageMenu() {
+    document.getElementById('fullPageMenu').style.display = "none";
     document.body.style.overflow = "auto"; // Re-enable scrolling
+    
+    // Show the main content again
+    document.querySelector('#portfolio').style.display = "block";
+    document.querySelector('nav').style.display = "block";
+    
+    // Show other sections
+    const sections = ['#about', '#team', '#contact'];
+    sections.forEach(section => {
+        const element = document.querySelector(section);
+        if (element) element.style.display = "block";
+    });
 }
 </script>
